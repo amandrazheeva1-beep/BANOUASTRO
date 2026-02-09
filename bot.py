@@ -2,8 +2,12 @@ import json
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
-TOKEN = "ТВОЙ_ТОКЕН_БОТА"
-
+if __name__ == '__main__':
+    # Получить токен из .env
+    TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+    
+    if not TOKEN:
+        raise ValueError("TELEGRAM_BOT_TOKEN не найден в .env файле!")
 
 # Загружаем меню
 with open("menu.json", "r", encoding="utf-8") as f:
