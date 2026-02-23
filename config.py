@@ -1,2 +1,6 @@
 TOKEN = "8340552448:AAH1FrrEIrdDX-Nb472PSDLJM4LahgXwVRs"
 ADMIN_ID = 1071317313
+
+import os
+
+TOKEN = os.getenv("TOKEN")
