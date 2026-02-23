@@ -38,7 +38,6 @@ def main():
         states={
             NAME: [MessageHandler(filters.TEXT, get_name)],
             DATE: [MessageHandler(filters.TEXT, get_date)],
-            PLACE OF BIRTH: [MessageHandler(filters.TEXT, get_place_of_birth)],
             REQUEST: [MessageHandler(filters.TEXT, get_request)],
         },
         fallbacks=[]
